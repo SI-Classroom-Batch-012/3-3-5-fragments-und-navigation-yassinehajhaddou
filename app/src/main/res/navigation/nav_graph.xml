@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/PCHardwareListFragment"
+    app:defaultNavHost="true">
+
+    <fragment
+        android:id="@+id/PCHardwareListFragment"
+        android:name="com.example.pc_hardwareshoppingapp.PCHardwareListFragment"
+        android:label="fragment_pc__hardware_list"
+        tools:layout="@layout/fragment_pc__hardware_list" >
+        <action
+            android:id="@+id/action_PCHardwareListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.pc_hardwareshoppingapp.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="com.example.pc_hardwareshoppingapp.EditFragment"
+        android:label="fragment_edit"
+        tools:layout="@layout/fragment_edit" />
+</navigation>
